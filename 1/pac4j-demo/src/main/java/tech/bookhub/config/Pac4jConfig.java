@@ -18,9 +18,4 @@ public class Pac4jConfig {
         Config config = new Config(clients);
         return config;
     }
-
-    @Bean
-    public Pac4jEntryPoint pac4jEntryPoint() {
-        return new Pac4jEntryPoint(config(), "GitHubClient");
-    }
 }
