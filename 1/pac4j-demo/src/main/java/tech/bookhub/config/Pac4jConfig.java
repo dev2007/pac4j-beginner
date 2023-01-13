@@ -3,7 +3,6 @@ package tech.bookhub.config;
 import org.pac4j.core.client.Clients;
 import org.pac4j.core.config.Config;
 import org.pac4j.oauth.client.GitHubClient;
-import org.pac4j.springframework.security.web.Pac4jEntryPoint;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
