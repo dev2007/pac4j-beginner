@@ -4,7 +4,6 @@ import org.pac4j.core.config.Config;
 import org.pac4j.jee.filter.CallbackFilter;
 import org.pac4j.jee.filter.LogoutFilter;
 import org.pac4j.jee.filter.SecurityFilter;
-import org.pac4j.springframework.security.web.Pac4jEntryPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -21,9 +20,6 @@ public class SecurityConfig {
     public static class CallbackWebSecurityConfigurationAdapter extends WebSecurityConfigurerAdapter {
         @Autowired
         private Config config;
-
-        @Autowired
-        private Pac4jEntryPoint pac4jEntryPoint;
 
         protected void configure(final HttpSecurity http) throws Exception {
             http.antMatcher("/callback")
